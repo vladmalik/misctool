@@ -6,5 +6,5 @@
 // @grant       none
 // ==/UserScript==
 
-$(".submit-button").before('<div style="margin-bottom: 20px; padding: 20px; border: 1px solid #ccc"><label>Project the effect of </label><input class="more-input" style="width:50px" type="text" value=50> % more traffic on the Margin of Error <button class="more-button" type="button" style="background: #888; color: white;border:0">View result</button><small><p style="display: block"><span style="color: red">Warning</span>: This does not predict what will happen, because it ignores changes in sampling error.</p></div>');
+$(".add-input-link").after('<div style="margin-top: 20px; margin-bottom: 20px; padding: 20px; border: 1px solid #ccc"><label>Project the effect of </label><input class="more-input" style="width:50px" type="text" value=50> % more traffic on the Margin of Error <button class="more-button" type="button" style="background: #888; color: white;border:0">View result</button><small><p style="display: block"><span style="color: red">Warning</span>: This does not predict what will happen, because it ignores changes in sampling error.</p></div>');
 $(".more-button").click(function() { $(".num-samples-input, .num-successes-input").each(function() { $(this).val(parseInt($(this).val() * (1+$(".more-input").val()/100))) }); $(this).parents("form").submit() });
